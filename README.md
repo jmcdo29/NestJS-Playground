@@ -1,5 +1,9 @@
 # Configuration Module Loading Issue
 
+## The Solution
+
+As it turns out, I was neglecting to add the `@Injectable()` decorator to my `DatabaseModuleConfig` class, making it impossible for Nest to wait and inject the class correctly. I have updated the class to reflect the correct configuration and no long er have this problem.
+
 ## The problem
 
 For whatever reason, my `DatabaseModule` is loaded before my `ConfigModule` is even though I am trying to inject `ConfigService` into the `DatabaseModule` to allow for dynamic database configuration after having my environment variables verified. I'm using `DynamicModule` set ups similar to `TypeORM` or the `JwtModule`. In my main project I'm also using a similar set up for the `GraphQLModule` and having no issues with it, only the `DatabaseModule` so I'm trying to figure out what is happening.

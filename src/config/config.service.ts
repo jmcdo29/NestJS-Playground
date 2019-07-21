@@ -19,7 +19,6 @@ export class ConfigService {
     @Inject(CONFIG_MODULE_OPTIONS)
     private readonly options: ConfigModuleOptions,
   ) {
-    console.log('Constructing configService');
     if (!options.useProcess && !options.fileName) {
       throw new Error(
         'Missing configuration options.' +
