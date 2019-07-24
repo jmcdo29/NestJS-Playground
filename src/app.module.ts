@@ -3,18 +3,24 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from './config/config.module';
 import { DatabaseModule } from './database/database.module';
-import { ConfigService } from './config/config.service';
 import { DatabaseModuleConfig } from './options/database.config';
+import { ConfigModuleConfig } from './options/config.config';
+import { MongooseModule } from '@nestjs/mongoose';
+import { MongooseModuleConfig } from './options/mongo.config';
+import { CatsModule } from './cats/cats.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      fileName: '.env',
+    ConfigModule.forRootAsync({
+      useClass: ConfigModuleConfig,
     }),
     DatabaseModule.forRootAsync({
       useClass: DatabaseModuleConfig,
-      inject: [ConfigService],
     }),
+    MongooseModule.forRootAsync({
+      useClass: MongooseModuleConfig,
+    }),
+    CatsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
