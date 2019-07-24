@@ -17,7 +17,7 @@ A nothing special repository for me to play around with a lot of Nest configurat
 
 ## Requests
 
-[Submit an issue](https://github.com/jmcdo29/NestJS-Playground/issues/new) if you want to see something done and I'll see if I can't get to it eventually! Make sure there isn't [already as solution for it](./tree/master/Issues%20%26%20Solutions) first. 
+[Submit an issue](https://github.com/jmcdo29/NestJS-Playground/issues/new) if you want to see something done and I'll see if I can't get to it eventually! Make sure there isn't [already as solution for it](./Issues%20%26%20Solutions) first. 
 
 ## Contact Me
 
