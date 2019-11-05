@@ -28,7 +28,7 @@
     "dotenv": "^8.0.0",
     "joi": "^14.3.1",
     "mc-scribe": "^3.2.1",
-    "mongoose": "^5.6.6",
+    "mongoose": "^5.7.5",
     "pg": "^7.11.0",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
